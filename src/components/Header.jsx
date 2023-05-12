@@ -12,6 +12,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
+import { NavLink as routerLink } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 import MobileMenu from './MobileMenu';
 
@@ -19,7 +20,7 @@ const Header = () => {
   const isDesktop = useBreakpointValue({ base: false, lg: true});
   const { isOpen, onOpen, onClose } = useDisclosure();
   const buttonRef = useRef(null);
-  const urls = ['Locations', 'Monsters', 'Armour', 'Weapons'];
+  const urls = ['Home', 'Locations', 'Monsters', 'Armour', 'Weapons'];
 
   return (
     <Box as='section'>
@@ -33,7 +34,7 @@ const Header = () => {
                   <ButtonGroup variant='link' spacing='8'>
                     {
                       urls.map((item) => (
-                        <Link key={item} display='flex'>
+                        <Link as={routerLink} to={item === 'Home' ? '/' : item.toLowerCase()} key={item} display='flex'>
                           <Button key={item} color='green.300' lineHeight='0'>{item}</Button>
                         </Link>
                       ))
