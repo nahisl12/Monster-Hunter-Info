@@ -7,6 +7,7 @@ import Monsters from './components/Monsters';
 import Locations from './components/Locations';
 import Armours from './components/Armours';
 import Weapons from './components/Weapons';
+import DetailedView from './components/DetailedView';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +20,8 @@ function App() {
         <Routes>
           <Route path='/' element={<h1>Homepage</h1>} />
           <Route path='locations' element={<Locations isLoading={isLoading} setIsLoading={setIsLoading} />} />
-          <Route path='monsters' element={<Monsters isLoading={isLoading} setIsLoading={setIsLoading} />} />
+          <Route path='monsters' element={<Monsters isLoading={isLoading} setIsLoading={setIsLoading} />}/>
+          <Route path='monsters/:slug' element={<DetailedView />} />
           <Route path='armour' element={<Armours isLoading={isLoading} setIsLoading={setIsLoading} />} />
           <Route path='weapons' element={<Weapons isLoading={isLoading} setIsLoading={setIsLoading} />} />
           <Route path='*' element={<h1>Oops... No Page Found...</h1>} />
