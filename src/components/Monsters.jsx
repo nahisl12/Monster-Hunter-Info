@@ -55,7 +55,15 @@ const Monsters = ({ isLoading, setIsLoading }) => {
               (
                 resultsToDisplay.map(monster => {
                   return (
-                    <InfoCard key={monster.id} img={monster?.img} name={monster.name} description={monster.description} linkLoc={`${monster.name}`} ></InfoCard>
+                    <InfoCard 
+                      key={monster.id}
+                      img={monster?.img} 
+                      name={monster.name} 
+                      description={monster.description} 
+                      linkLoc={`${monster.name}`}
+                      dataObj={monster}
+                    >
+                    </InfoCard>
                   )
                 })
               )
