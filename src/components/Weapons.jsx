@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getData } from '../helpers/ApiCalls';
-import { Grid, Heading, CircularProgress, Flex, Button, Image } from '@chakra-ui/react';
+import { Grid, Heading, CircularProgress } from '@chakra-ui/react';
 import InfoCard from './InfoCard.jsx';
 import Pagination from './Pagination';
+import SelectionFilters from './SelectionFilters';
 
 // displays ALL weapons - big changes in layout for this one:
 // Organize by weapon types (separate tabs for each perhaps?) and possibly further categories each weapon as there's nearly 1.4k weapons
@@ -69,15 +70,7 @@ const Weapons = ({ isLoading, setIsLoading }) => {
   return (
     <>
       <Heading as='h1' fontSize={['3xl', '5xl', '5xl']} textAlign={'center'}>All Weapons</Heading>
-
-      <Flex flexWrap='wrap' gap='5' mt='10' justify='center'>
-        {
-          weaponTypes.map(weapon => (
-            <Button key={weapon.type} colorScheme='green' leftIcon={<Image src={weapon.icon} boxSize='7' />} onClick={() => getWeaponsOfType(weapon.query_value)}>{weapon.type}</Button>
-          ))
-        }
-      </Flex>
-
+      <SelectionFilters data={weaponTypes} actionFunction={getWeaponsOfType} />
       {
         isLoading ? 
         (

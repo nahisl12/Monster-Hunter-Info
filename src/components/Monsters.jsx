@@ -2,11 +2,20 @@ import { useEffect, useState } from 'react';
 import { getData } from '../helpers/ApiCalls';
 import { Grid, Heading, CircularProgress } from '@chakra-ui/react';
 import InfoCard from './InfoCard.jsx';
+import Pagination from './Pagination';
 
 // displays ALL monsters
 // eslint-disable-next-line react/prop-types
 const Monsters = ({ isLoading, setIsLoading }) => {
   const [monsters, setMonsters] = useState([]);
+
+    // pagination info
+    const [currPage, setCurrPage] = useState(1);
+    const [resultsPerPage] = useState(16);
+    const numOfPages = Math.ceil(monsters.length / resultsPerPage);
+    const lastItem = currPage * resultsPerPage;
+    const firstItem = lastItem - resultsPerPage;
+    const resultsToDisplay = monsters.slice(firstItem, lastItem);  // this is the array trimmed down and used for displaying
 
   useEffect(() => {
     let ignore = false;
@@ -32,25 +41,26 @@ const Monsters = ({ isLoading, setIsLoading }) => {
   return (
     <>
       <Heading as='h1' fontSize={['3xl', '5xl', '5xl']} textAlign={'center'}>All Monsters</Heading>
-
-      {/* was previously a flex - can change back if need be but this wya we can have 4 in a row */}
       {
         isLoading ? 
         (
           <CircularProgress isIndeterminate color='green.300' mt='10'/>
         ) :
         (
-        <Grid templateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap='5' mt='10'>
-          {
-            (
-              monsters.map(monster => {
-                return (
-                  <InfoCard key={monster.id} img={monster?.img} name={monster.name} description={monster.description} ></InfoCard>
-                )
-              })
-            )
-          }
-        </Grid>
+        <>
+          <Grid templateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap='5' mt='10'>
+            {
+              (
+                resultsToDisplay.map(monster => {
+                  return (
+                    <InfoCard key={monster.id} img={monster?.img} name={monster.name} description={monster.description} ></InfoCard>
+                  )
+                })
+              )
+            }
+          </Grid>
+          { numOfPages > 1 && <Pagination numOfPages={numOfPages} currPage={currPage} setCurrPage={setCurrPage} /> }
+        </>
         )
       }
     </>
