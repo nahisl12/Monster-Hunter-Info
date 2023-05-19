@@ -83,7 +83,15 @@ const Weapons = ({ isLoading, setIsLoading }) => {
               (
                 resultsToDisplay.map(weapon => {
                   return (
-                    <InfoCard key={weapon.id} img={weapon.assets?.image} name={weapon.name} description={`${weapon.type} attack: ${weapon.attack.display}`} ></InfoCard>
+                    <InfoCard 
+                      key={weapon.id} 
+                      img={weapon.assets?.image} 
+                      name={weapon.name} 
+                      description={`${weapon.type} attack: ${weapon.attack.display}`} 
+                      linkLoc={`${weapon.name}`}
+                      dataObj={weapon}
+                    >
+                    </InfoCard>
                   )
                 })
               )

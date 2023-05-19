@@ -20,10 +20,13 @@ function App() {
         <Routes>
           <Route path='/' element={<h1>Homepage</h1>} />
           <Route path='locations' element={<Locations isLoading={isLoading} setIsLoading={setIsLoading} />} />
+          <Route path='locations/:slug' element={<h1>locations full view</h1>} />
           <Route path='monsters' element={<Monsters isLoading={isLoading} setIsLoading={setIsLoading} />}/>
           <Route path='monsters/:slug' element={<DetailedView />} />
           <Route path='armour' element={<Armours isLoading={isLoading} setIsLoading={setIsLoading} />} />
+          <Route path='armour/:slug' element={<h1>armour full view</h1>} />
           <Route path='weapons' element={<Weapons isLoading={isLoading} setIsLoading={setIsLoading} />} />
+          <Route path='weapons/:slug' element={<h1>weapons full view</h1>} />
           <Route path='*' element={<h1>Oops... No Page Found...</h1>} />
         </Routes>
         </Container>

@@ -47,7 +47,15 @@ const Locations = ({ isLoading, setIsLoading }) => {
             (
               locations.map(location => {
                 return (
-                  <InfoCard key={location.id} img={location?.img} name={location.name} description={`${location.zoneCount} Zones`} ></InfoCard>
+                  <InfoCard
+                    key={location.id} 
+                    img={location?.img} 
+                    name={location.name} 
+                    description={`${location.zoneCount} Zones`}
+                    linkLoc={`${location.name}`}
+                    dataObj={location}
+                  >
+                  </InfoCard>
                 )
               })
             )

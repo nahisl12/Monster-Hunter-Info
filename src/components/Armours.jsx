@@ -77,7 +77,15 @@ const Armours = ({ isLoading, setIsLoading }) => {
               (
                 resultsToDisplay.map(armour => {
                   return (
-                    <InfoCard key={armour.id} img={armour.pieces ? armour.pieces[0].assets.imageMale : armour?.assets?.imageMale } name={armour.name} description={`${armour.rank}`} ></InfoCard>
+                    <InfoCard 
+                      key={armour.id} 
+                      img={armour.pieces ? armour.pieces[0].assets.imageMale : armour?.assets?.imageMale } 
+                      name={armour.name} 
+                      description={`${armour.rank}`}
+                      linkLoc={`${armour.name}`}
+                      dataObj={armour} 
+                    >
+                    </InfoCard>
                   )
                 })
               )
