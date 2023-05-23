@@ -13,8 +13,6 @@ import fallBackImg from '../assets/mhw_logo.png';
 const ViewWeapon = () => {
   let { state } = useLocation();
 
-  console.log(state);
-
   return (
     <>
       <VStack>

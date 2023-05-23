@@ -29,8 +29,6 @@ const Locations = ({ isLoading, setIsLoading }) => {
     }
   }, []);
 
-  console.log(locations);
-
   return (
     <>
       <Heading as='h1' fontSize={['3xl', '5xl', '5xl']} textAlign={'center'}>All Locations</Heading>

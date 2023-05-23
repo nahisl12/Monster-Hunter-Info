@@ -13,16 +13,16 @@ import {
 import fallBackImg from '../assets/mhw_logo.png';
 
 const statusTypes = [
-  {'type': 'blast', 'icon': '../src/assets/elements/Status_Blastblight_Icon.png'},
-  {'type': 'poison', 'icon': '../src/assets/elements/Status_Poison_Icon.png'},
-  {'type': 'sleep', 'icon': '../src/assets/elements/Status_Sleep_Icon.png'},
-  {'type': 'paralysis', 'icon': '../src/assets/elements/Status_Paralysis_Icon.png'},
-  {'type': 'stun', 'icon': '../src/assets/elements/Status_Stun_Icon.png'},
-  {'type': 'ice', 'icon': '../src/assets/elements/Element_Ice_Icon.png'},
-  {'type': 'water', 'icon': '../src/assets/elements/Element_Water_Icon.png'},
-  {'type': 'thunder', 'icon': '../src/assets/elements/Element_Thunder_Icon.png'},
-  {'type': 'fire', 'icon': '../src/assets/elements/Element_Fire_Icon.png'},
-  {'type': 'dragon', 'icon': '../src/assets/elements/Element_Dragon_Icon.png'},
+  {'type': 'blast', 'icon': '/assets/elements/Status_Blastblight_Icon.png'},
+  {'type': 'poison', 'icon': '/assets/elements/Status_Poison_Icon.png'},
+  {'type': 'sleep', 'icon': '/assets/elements/Status_Sleep_Icon.png'},
+  {'type': 'paralysis', 'icon': '/assets/elements/Status_Paralysis_Icon.png'},
+  {'type': 'stun', 'icon': '/assets/elements/Status_Stun_Icon.png'},
+  {'type': 'ice', 'icon': '/assets/elements/Element_Ice_Icon.png'},
+  {'type': 'water', 'icon': '/assets/elements/Element_Water_Icon.png'},
+  {'type': 'thunder', 'icon': '/assets/elements/Element_Thunder_Icon.png'},
+  {'type': 'fire', 'icon': '/assets/elements/Element_Fire_Icon.png'},
+  {'type': 'dragon', 'icon': '/assets/elements/Element_Dragon_Icon.png'},
 ];
 
 // eslint-disable-next-line react/prop-types
