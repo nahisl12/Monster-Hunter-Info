@@ -6,19 +6,31 @@ import {
   Text, 
   Image
 } from '@chakra-ui/react';
+
+// img imports
 import fallBackImg from '../assets/mhw_logo.png';
+import ancientForest from '../assets/locations/MHW-Ancient_Forest.png';
+import coralHighlands from '../assets/locations/MHW-Coral_Highlands.png';
+import wildspireWaste from '../assets/locations/MHW-Wildspire_Waste.png';
+import rottenVale from '../assets/locations/MHW-Rotten_Vale.png';
+import eldersRecess from '../assets/locations/MHW-Elders_Recess.png';
+import greatRavine from '../assets/locations/MHW-Great_Ravine.png';
+import everstream from '../assets/locations/MHW-Everstream.png';
+import elDorado from '../assets/locations/MHW-Caverns_of_El_Dorado.png';
+import specialArena from '../assets/locations/MHW-special_arena_1.png';
+import arena from '../assets/locations/MHW-large_arena.png';
 
 const locations = [
-  {"type": "ancient forest", "icon": "../src/assets/locations/MHW-Ancient_Forest.png"},
-  {"type": "coral highlands", "icon": "../src/assets/locations/MHW-Coral_Highlands.png"},
-  {"type": "wildspire waste", "icon": "../src/assets/locations/MHW-Wildspire_Waste.png"},
-  {"type": "rotten vale", "icon": "../src/assets/locations/MHW-Rotten_Vale.png"},
-  {"type": "elder's recess", "icon": "../src/assets/locations/MHW-Elders_Recess.png"},
-  {"type": "great ravine", "icon": "../src/assets/locations/MHW-Great_Ravine.png"},
-  {"type": "everstream", "icon": "../src/assets/locations/MHW-Everstream.png"},
-  {"type": "caverns of el dorado", "icon": "../src/assets/locations/MHW-Caverns_of_El_Dorado.png"},
-  {"type": "special arena", "icon": "../src/assets/locations/MHW-special_arena_1.png"},
-  {"type": "arena", "icon": "../src/assets/locations/MHW-large_arena.png"},
+  {"type": "ancient forest", "icon": ancientForest},
+  {"type": "coral highlands", "icon": coralHighlands},
+  {"type": "wildspire waste", "icon": wildspireWaste},
+  {"type": "rotten vale", "icon": rottenVale},
+  {"type": "elder's recess", "icon": eldersRecess},
+  {"type": "great ravine", "icon": greatRavine},
+  {"type": "everstream", "icon": everstream},
+  {"type": "caverns of el dorado", "icon": elDorado},
+  {"type": "special arena", "icon": specialArena},
+  {"type": "arena", "icon": arena},
 ];
 
 const ViewLocation = () => {
