@@ -5,24 +5,38 @@ import InfoCard from './InfoCard.jsx';
 import Pagination from './Pagination';
 import SelectionFilters from './SelectionFilters';
 
-// displays ALL weapons - big changes in layout for this one:
-// Organize by weapon types (separate tabs for each perhaps?) and possibly further categories each weapon as there's nearly 1.4k weapons
+// img imports
+import greatsword from '../assets/icons/Great_Sword_Icon_White.png';
+import swordAndShield from '../assets/icons/Sword_and_Shield_Icon_White.png';
+import dualBlades from '../assets/icons/Dual_Blades_Icon_White.png';
+import longSword from '../assets/icons/Long_Sword_Icon_White.png';
+import hammer from '../assets/icons/Hammer_Icon_White.png';
+import huntingHorn from '../assets/icons/Hunting_Horn_Icon_White.png';
+import lance from '../assets/icons/Lance_Icon_White.png';
+import gunlance from '../assets/icons/Gunlance_Icon_White.png';
+import switchAxe from '../assets/icons/Switch_Axe_Icon_White.png';
+import chargeBlade from '../assets/icons/Charge_Blade_Icon_White.png';
+import insectGlaive from '../assets/icons/Insect_Glaive_Icon_White.png';
+import bow from '../assets/icons/Bow_Icon_White.png';
+import lightBowgun from '../assets/icons/Light_Bowgun_Icon_White.png';
+import heavyBowgun from '../assets/icons/Heavy_Bowgun_Icon_White.png';
+
 
 const weaponTypes = [
-  {'type': 'Great Sword', 'query_value' : 'great-sword', 'icon': 'src/assets/icons/Great_Sword_Icon_White.png'},
-  {'type': 'Sword & Shield', 'query_value' : 'sword-and-shield', 'icon': 'src/assets/icons/Sword_and_Shield_Icon_White.png'},
-  {'type': 'Dual Blades', 'query_value' : 'dual-blades', 'icon': 'src/assets/icons/Dual_Blades_Icon_White.png'},
-  {'type': 'Long Sword', 'query_value' : 'long-sword', 'icon': 'src/assets/icons/Long_Sword_Icon_White.png'},
-  {'type': 'Hammer', 'query_value' : 'hammer', 'icon': 'src/assets/icons/Hammer_Icon_White.png'},
-  {'type': 'Hunting Horn', 'query_value' : 'hunting-horn', 'icon': 'src/assets/icons/Hunting_Horn_Icon_White.png'},
-  {'type': 'Lance', 'query_value' : 'lance', 'icon': 'src/assets/icons/Lance_Icon_White.png'},
-  {'type': 'Gunlance', 'query_value' : 'gunlance', 'icon': 'src/assets/icons/Gunlance_Icon_White.png'},
-  {'type': 'Switch Axe', 'query_value' : 'switch-axe', 'icon': 'src/assets/icons/Switch_Axe_Icon_White.png'},
-  {'type': 'Charge Blade', 'query_value' : 'charge-blade', 'icon': 'src/assets/icons/Charge_Blade_Icon_White.png'},
-  {'type': 'Insect Glaive', 'query_value' : 'insect-glaive', 'icon': 'src/assets/icons/Insect_Glaive_Icon_White.png'},
-  {'type': 'Bow', 'query_value' : 'bow', 'icon': 'src/assets/icons/Bow_Icon_White.png'},
-  {'type': 'Light Bowgun', 'query_value' : 'light-bowgun', 'icon': 'src/assets/icons/Light_Bowgun_Icon_White.png'},
-  {'type': 'Heavy Bowgun', 'query_value' : 'heavy-bowgun', 'icon': 'src/assets/icons/Heavy_Bowgun_Icon_White.png'}
+  {'type': 'Great Sword', 'query_value' : 'great-sword', 'icon': greatsword},
+  {'type': 'Sword & Shield', 'query_value' : 'sword-and-shield', 'icon': swordAndShield},
+  {'type': 'Dual Blades', 'query_value' : 'dual-blades', 'icon': dualBlades},
+  {'type': 'Long Sword', 'query_value' : 'long-sword', 'icon': longSword},
+  {'type': 'Hammer', 'query_value' : 'hammer', 'icon': hammer},
+  {'type': 'Hunting Horn', 'query_value' : 'hunting-horn', 'icon': huntingHorn},
+  {'type': 'Lance', 'query_value' : 'lance', 'icon': lance},
+  {'type': 'Gunlance', 'query_value' : 'gunlance', 'icon': gunlance},
+  {'type': 'Switch Axe', 'query_value' : 'switch-axe', 'icon': switchAxe},
+  {'type': 'Charge Blade', 'query_value' : 'charge-blade', 'icon': chargeBlade},
+  {'type': 'Insect Glaive', 'query_value' : 'insect-glaive', 'icon': insectGlaive},
+  {'type': 'Bow', 'query_value' : 'bow', 'icon': bow},
+  {'type': 'Light Bowgun', 'query_value' : 'light-bowgun', 'icon': lightBowgun},
+  {'type': 'Heavy Bowgun', 'query_value' : 'heavy-bowgun', 'icon': heavyBowgun}
 ];
 
 // eslint-disable-next-line react/prop-types

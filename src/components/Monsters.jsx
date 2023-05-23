@@ -1,11 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { getData } from '../helpers/ApiCalls';
 import { Grid, Heading, CircularProgress } from '@chakra-ui/react';
 import InfoCard from './InfoCard.jsx';
 import Pagination from './Pagination';
 
-// displays ALL monsters
-// eslint-disable-next-line react/prop-types
 const Monsters = ({ isLoading, setIsLoading }) => {
   const [monsters, setMonsters] = useState([]);
 

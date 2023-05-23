@@ -10,24 +10,33 @@ import {
     AccordionPanel,
     AccordionIcon,
   } from '@chakra-ui/react';
+  
+// img imports  
 import fallBackImg from '../assets/mhw_logo.png';
 import blast from '../assets/elements/Status_Blastblight_Icon.png';
+import poison from '../assets/elements/Status_Poison_Icon.png';
+import sleep from '../assets/elements/Status_Sleep_Icon.png';
+import paralysis from '../assets/elements/Status_Paralysis_Icon.png';
+import stun from '../assets/elements/Status_Stun_Icon.png';
+import ice from '../assets/elements/Element_Ice_Icon.png';
+import water from '../assets/elements/Element_Water_Icon.png';
 import thunder from '../assets/elements/Element_Thunder_Icon.png';
+import fire from '../assets/elements/Element_Fire_Icon.png';
+import dragon from '../assets/elements/Element_Dragon_Icon.png';
 
 const statusTypes = [
   {'type': 'blast', 'icon': blast},
-  {'type': 'poison', 'icon': '/assets/elements/Status_Poison_Icon.png'},
-  {'type': 'sleep', 'icon': '/assets/elements/Status_Sleep_Icon.png'},
-  {'type': 'paralysis', 'icon': '/assets/elements/Status_Paralysis_Icon.png'},
-  {'type': 'stun', 'icon': '/assets/elements/Status_Stun_Icon.png'},
-  {'type': 'ice', 'icon': '/assets/elements/Element_Ice_Icon.png'},
-  {'type': 'water', 'icon': '/assets/elements/Element_Water_Icon.png'},
+  {'type': 'poison', 'icon': poison},
+  {'type': 'sleep', 'icon': sleep},
+  {'type': 'paralysis', 'icon': paralysis},
+  {'type': 'stun', 'icon': stun},
+  {'type': 'ice', 'icon': ice},
+  {'type': 'water', water},
   {'type': 'thunder', 'icon': thunder},
-  {'type': 'fire', 'icon': '/assets/elements/Element_Fire_Icon.png'},
-  {'type': 'dragon', 'icon': '/assets/elements/Element_Dragon_Icon.png'},
+  {'type': 'fire', 'icon': fire},
+  {'type': 'dragon', 'icon': dragon},
 ];
 
-// eslint-disable-next-line react/prop-types
 const AccordionInfo = ({ heading, data, type, isArray }) => {
 
   const accordionType = type;
@@ -42,9 +51,7 @@ const AccordionInfo = ({ heading, data, type, isArray }) => {
         <AccordionPanel mb='10'>
           <Flex gap='5' justify='center' wrap='wrap'>
             {
-              // eslint-disable-next-line react/prop-types
               data.map((element, i) => {
-                // eslint-disable-next-line react/prop-types
                 const src = statusTypes.filter(type => type.type === element || type.type === element.element);
                 
                 return (

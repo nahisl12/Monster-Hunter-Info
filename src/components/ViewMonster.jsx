@@ -1,4 +1,3 @@
-// This is the layout for detailed View
 import { useLocation } from 'react-router-dom';
 import { 
   Box, 

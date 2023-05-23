@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { getData } from '../helpers/ApiCalls';
 import { Grid, Heading, CircularProgress } from '@chakra-ui/react';
@@ -5,18 +6,21 @@ import InfoCard from './InfoCard.jsx';
 import SelectionFilters from './SelectionFilters';
 import Pagination from './Pagination';
 
-// displays ALL armour sets - will change layout later
-// eslint-disable-next-line react/prop-types
+// img imports
+import head from '../assets/icons/Helmet_Icon_White.png';
+import chest from '../assets/icons/Chest_Icon_White.png';
+import gloves from '../assets/icons/Glove_Icon_White.png';
+import waist from '../assets/icons/Waist_Icon_White.png';
+import legs from '../assets/icons/Leg_Icon_White.png';
 
 const armourTypes = [
-  {'type': 'Head', 'query_value' : 'head', 'icon': 'src/assets/icons/Helmet_Icon_White.png'},
-  {'type': 'Chest', 'query_value' : 'chest', 'icon': 'src/assets/icons/Chest_Icon_White.png'},
-  {'type': 'Gloves', 'query_value' : 'gloves', 'icon': 'src/assets/icons/Glove_Icon_White.png'},
-  {'type': 'Waist', 'query_value' : 'waist', 'icon': 'src/assets/icons/Waist_Icon_White.png'},
-  {'type': 'Legs', 'query_value' : 'legs', 'icon': 'src/assets/icons/Leg_Icon_White.png'},
+  {'type': 'Head', 'query_value' : 'head', 'icon': head},
+  {'type': 'Chest', 'query_value' : 'chest', 'icon': chest},
+  {'type': 'Gloves', 'query_value' : 'gloves', 'icon': gloves},
+  {'type': 'Waist', 'query_value' : 'waist', 'icon': waist},
+  {'type': 'Legs', 'query_value' : 'legs', 'icon': legs},
 ];
 
-// eslint-disable-next-line react/prop-types
 const Armours = ({ isLoading, setIsLoading }) => {
   const [armourSets, setArmourSets] = useState([]);
 

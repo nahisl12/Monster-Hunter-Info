@@ -1,10 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { getData } from '../helpers/ApiCalls';
 import { Grid, Heading, CircularProgress } from '@chakra-ui/react';
 import InfoCard from './InfoCard.jsx';
 
-// displays ALL Locations - will change layout later
-// eslint-disable-next-line react/prop-types
 const Locations = ({ isLoading, setIsLoading }) => {
   const [locations, setLocations] = useState([]);
 
