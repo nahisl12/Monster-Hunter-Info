@@ -23,7 +23,7 @@ const Header = () => {
   const urls = ['Locations', 'Monsters', 'Armour', 'Weapons'];
 
   return (
-    <Box as='section'>
+    <Box as='section' position='sticky' top='0' zIndex='overlay'>
       <Box as='nav' bg='white' boxShadow='sm'>
         <Container maxW='container.xl' paddingY={{ base: '4', lg: '5' }}>
           <HStack spacing='10' justify='space-between'>
