@@ -11,16 +11,18 @@ import {
     AccordionIcon,
   } from '@chakra-ui/react';
 import fallBackImg from '../assets/mhw_logo.png';
+import blast from '../assets/elements/Status_Blastblight_Icon.png';
+import thunder from '../assets/elements/Element_Thunder_Icon.png';
 
 const statusTypes = [
-  {'type': 'blast', 'icon': '/assets/elements/Status_Blastblight_Icon.png'},
+  {'type': 'blast', 'icon': blast},
   {'type': 'poison', 'icon': '/assets/elements/Status_Poison_Icon.png'},
   {'type': 'sleep', 'icon': '/assets/elements/Status_Sleep_Icon.png'},
   {'type': 'paralysis', 'icon': '/assets/elements/Status_Paralysis_Icon.png'},
   {'type': 'stun', 'icon': '/assets/elements/Status_Stun_Icon.png'},
   {'type': 'ice', 'icon': '/assets/elements/Element_Ice_Icon.png'},
   {'type': 'water', 'icon': '/assets/elements/Element_Water_Icon.png'},
-  {'type': 'thunder', 'icon': '/assets/elements/Element_Thunder_Icon.png'},
+  {'type': 'thunder', 'icon': thunder},
   {'type': 'fire', 'icon': '/assets/elements/Element_Fire_Icon.png'},
   {'type': 'dragon', 'icon': '/assets/elements/Element_Dragon_Icon.png'},
 ];
