@@ -31,7 +31,7 @@ const statusTypes = [
   {'type': 'paralysis', 'icon': paralysis},
   {'type': 'stun', 'icon': stun},
   {'type': 'ice', 'icon': ice},
-  {'type': 'water', water},
+  {'type': 'water', 'icon': water},
   {'type': 'thunder', 'icon': thunder},
   {'type': 'fire', 'icon': fire},
   {'type': 'dragon', 'icon': dragon},

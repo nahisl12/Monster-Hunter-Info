@@ -11,6 +11,7 @@ import AccordionInfo from './AccordionInfo';
 const ViewMonster = () => {
   let { state } = useLocation();
 
+  console.log(state);
   return (
     <>
       <VStack>
