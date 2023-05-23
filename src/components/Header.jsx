@@ -20,7 +20,7 @@ const Header = () => {
   const isDesktop = useBreakpointValue({ base: false, lg: true});
   const { isOpen, onOpen, onClose } = useDisclosure();
   const buttonRef = useRef(null);
-  const urls = ['Home', 'Locations', 'Monsters', 'Armour', 'Weapons'];
+  const urls = ['Locations', 'Monsters', 'Armour', 'Weapons'];
 
   return (
     <Box as='section'>

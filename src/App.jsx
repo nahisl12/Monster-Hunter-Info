@@ -18,7 +18,7 @@ function App() {
       <Box bg='black' color='white' height='100%' minHeight='100vh' pt='20' pb='20'>
         <Container maxW='container.xl' centerContent overflow='hidden'>
         <Routes>
-          <Route path='/' element={<h1>Homepage</h1>} />
+          <Route path='/' element={<Locations isLoading={isLoading} setIsLoading={setIsLoading} />} />
           <Route path='locations' element={<Locations isLoading={isLoading} setIsLoading={setIsLoading} />} />
           <Route path='locations/:slug' element={<h1>locations full view</h1>} />
           <Route path='monsters' element={<Monsters isLoading={isLoading} setIsLoading={setIsLoading} />}/>
