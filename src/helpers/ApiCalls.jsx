@@ -13,7 +13,3 @@ export const getData = async (endpoint) => {
 
     return {};
 }
-
-export function fetchData() {
-    // another way to make function
-}

@@ -9,23 +9,8 @@ import {
 } from '@chakra-ui/react';
 import AccordionInfo from './AccordionInfo';
 
-const statusTypes = [
-  {'type': 'blast', 'icon': '../src/assets/elements/Status_Blastblight_Icon.png'},
-  {'type': 'poison', 'icon': '../src/assets/elements/Status_Poison_Icon.png'},
-  {'type': 'sleep', 'icon': '../src/assets/elements/Status_Sleep_Icon.png'},
-  {'type': 'paralysis', 'icon': '../src/assets/elements/Status_Paralysis_Icon.png'},
-  {'type': 'stun', 'icon': '../src/assets/elements/Status_Stun_Icon.png'},
-  {'type': 'ice', 'icon': '../src/assets/elements/Element_Ice_Icon.png'},
-  {'type': 'water', 'icon': '../src/assets/elements/Element_Water_Icon.png'},
-  {'type': 'thunder', 'icon': '../src/assets/elements/Element_Thunder_Icon.png'},
-  {'type': 'fire', 'icon': '../src/assets/elements/Element_Fire_Icon.png'},
-  {'type': 'dragon', 'icon': '../src/assets/elements/Element_Dragon_Icon.png'},
-];
-
 const ViewMonster = () => {
   let { state } = useLocation();
-
-  console.log(state);
 
   return (
     <>
@@ -50,8 +35,12 @@ const ViewMonster = () => {
           {
             state.type && (
               <Box>
-                <Heading as='h3' fontSize={['2xl', '2xl', '2xl']} textAlign={'center'} mt='5' mb='5'>Type: {state.type.toUpperCase()} </Heading>
-                <Heading as='h3' fontSize={['2xl', '2xl', '2xl']} textAlign={'center'} mt='5' mb='5'>Species: {state.species.toUpperCase()} </Heading>
+                <Heading as='h3' fontSize={['2xl', '2xl', '2xl']} textAlign={'center'} mt='5' mb='5'>Type: 
+                  <Text as='span' fontWeight='normal'> {state.type.toUpperCase()}</Text>
+                </Heading>
+                <Heading as='h3' fontSize={['2xl', '2xl', '2xl']} textAlign={'center'} mt='5' mb='5'>Species:  
+                  <Text as='span' fontWeight='normal'> {state.species.toUpperCase()}</Text>
+                </Heading>
               </Box>
             )
           }
@@ -59,17 +48,17 @@ const ViewMonster = () => {
           <Accordion mt='10' minWidth={['2sm', '2md', '3xl']} defaultIndex={[0]} allowToggle>
             {
               state.elements.length > 0 && (
-                <AccordionInfo heading={'Element(s)'} data={state.elements} types={statusTypes} />
+                <AccordionInfo heading={'Element(s)'} data={state.elements} type={'monster'} />
               )
             }
             {
               state.resistances.length > 0 && (
-                <AccordionInfo heading={'Resistances: '} data={state.resistances} types={statusTypes} />
+                <AccordionInfo heading={'Resistances: '} data={state.resistances} type={'monster'}  />
               )
             }
             {
               state.weaknesses.length > 0 && (
-                <AccordionInfo heading={'Weaknesses: '} data={state.weaknesses} types={statusTypes} />
+                <AccordionInfo heading={'Weaknesses: '} data={state.weaknesses} type={'monster'}  />
               )
             }
           </Accordion>

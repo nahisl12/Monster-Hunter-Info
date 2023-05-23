@@ -35,13 +35,11 @@ const Armours = ({ isLoading, setIsLoading }) => {
       setIsLoading(true)
 
       // only grabbing the first 15 results at the moment - will make this dynamic and add pagination soon
-      const armourInfo = await getData('https://mhw-db.com/armor/sets?q={"id":{"$lte":16}}');
+      const armourInfo = await getData('https://mhw-db.com/armor?q={"type":"head"}');
 
       if(!ignore) {
         setArmourSets(armourInfo);
         setIsLoading(false);
-
-        console.log(armourInfo);
       }
     }
 

@@ -38,8 +38,6 @@ const Monsters = ({ isLoading, setIsLoading }) => {
     }
   }, []);
 
-  console.log(resultsToDisplay);
-
   return (
     <>
       <Heading as='h1' fontSize={['3xl', '5xl', '5xl']} textAlign={'center'}>All Monsters</Heading>

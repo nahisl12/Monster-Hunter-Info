@@ -19,8 +19,6 @@ const Locations = ({ isLoading, setIsLoading }) => {
       if(!ignore) {
         setLocations(locationInfo);
         setIsLoading(false);
-
-        console.log(locationInfo);
       }
     }
 
@@ -30,6 +28,8 @@ const Locations = ({ isLoading, setIsLoading }) => {
       ignore = true;
     }
   }, []);
+
+  console.log(locations);
 
   return (
     <>
