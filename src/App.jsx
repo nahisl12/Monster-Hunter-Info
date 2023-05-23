@@ -7,7 +7,7 @@ import Monsters from './components/Monsters';
 import Locations from './components/Locations';
 import Armours from './components/Armours';
 import Weapons from './components/Weapons';
-import DetailedView from './components/DetailedView';
+import ViewMonster from './components/ViewMonster';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +22,7 @@ function App() {
           <Route path='locations' element={<Locations isLoading={isLoading} setIsLoading={setIsLoading} />} />
           <Route path='locations/:slug' element={<h1>locations full view</h1>} />
           <Route path='monsters' element={<Monsters isLoading={isLoading} setIsLoading={setIsLoading} />}/>
-          <Route path='monsters/:slug' element={<DetailedView />} />
+          <Route path='monsters/:slug' element={<ViewMonster />} />
           <Route path='armour' element={<Armours isLoading={isLoading} setIsLoading={setIsLoading} />} />
           <Route path='armour/:slug' element={<h1>armour full view</h1>} />
           <Route path='weapons' element={<Weapons isLoading={isLoading} setIsLoading={setIsLoading} />} />

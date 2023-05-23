@@ -20,7 +20,7 @@ const AccordionInfo = ({ heading, data, types }) => {
         <AccordionIcon />
       </AccordionButton>
       <AccordionPanel mb='10'>
-        <Flex gap='5' justify='center'>
+        <Flex gap='5' justify='center' wrap='wrap'>
           {
             // eslint-disable-next-line react/prop-types
             data.map((element, i) => {

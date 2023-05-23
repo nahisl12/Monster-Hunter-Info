@@ -22,7 +22,7 @@ const statusTypes = [
   {'type': 'dragon', 'icon': '../src/assets/elements/Element_Dragon_Icon.png'},
 ];
 
-const DetailedView = () => {
+const ViewMonster = () => {
   let { state } = useLocation();
 
   console.log(state);
@@ -31,7 +31,7 @@ const DetailedView = () => {
     <>
       <VStack>
         <Heading as='h1' fontSize={['3xl', '5xl', '5xl']} textAlign={'center'}>Monster: {state.name}</Heading>
-        <Text textAlign='center' fontSize='26' pt='10'>{state.description}</Text>
+        <Text textAlign='center' fontSize={['16px', '20px', '22px']} pt='10'>{state.description}</Text>
 
         <Box pt='5'>
           <Heading as='h4' fontSize={['3xl', '3xl', '3xl']} textAlign={'center'} mb='5'>Found In: </Heading>
@@ -56,7 +56,7 @@ const DetailedView = () => {
             )
           }
 
-          <Accordion mt='10' minWidth='4xl' defaultIndex={[0]} allowToggle>
+          <Accordion mt='10' minWidth={['2sm', '2md', '3xl']} defaultIndex={[0]} allowToggle>
             {
               state.elements.length > 0 && (
                 <AccordionInfo heading={'Element(s)'} data={state.elements} types={statusTypes} />
@@ -79,4 +79,4 @@ const DetailedView = () => {
   )
 }
 
-export default DetailedView;
+export default ViewMonster;
